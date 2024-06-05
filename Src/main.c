@@ -46,6 +46,7 @@
 /* USER CODE BEGIN PV */
 TaskHandle_t my_task;
 int i = 0;
+extern UART_HandleTypeDef huart2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -53,6 +54,9 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 void callback(void *data) {
 	for (;;) {
+//		HAL_UART_Transmit(&huart2, (uint8_t*) ("Hello\r\n"),
+//				sizeof("Hello\r\n"), HAL_MAX_DELAY);
+//		HAL_Delay(1000);
 		vTaskDelay(pdMS_TO_TICKS(1000));
 		i++;
 	}

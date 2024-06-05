@@ -190,6 +190,8 @@ void SX1276MB1MAS_RADIO_Bus_Init(void);
  */
 void SX1276MB1MAS_RADIO_Bus_deInit(void);
 
+
+
 #ifdef __cplusplus
 }
 #endif

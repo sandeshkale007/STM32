@@ -29,7 +29,7 @@
 /** @addtogroup BSP
   * @{
   */
-__weak HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef *hspi);
+HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef *hspi);
 
 /** @addtogroup NUCLEO_L152RE
   * @{
@@ -245,7 +245,7 @@ int32_t BSP_GetTick(void)
 
 /* SPI1 init function */
 
-__weak HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef *hspi)
+HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef *hspi)
 {
   HAL_StatusTypeDef ret = HAL_OK;
   hspi->Instance = SPI1;

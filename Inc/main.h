@@ -46,7 +46,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+//#define SX1276MB1MAS
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/

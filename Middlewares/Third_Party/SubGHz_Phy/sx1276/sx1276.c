@@ -1414,7 +1414,7 @@ static void SX1276SetOpMode( uint8_t opMode )
 
 void SX1276SetModem( RadioModems_t modem )
 {
-    if( ( SX1276Read( REG_OPMODE ) & RFLR_OPMODE_LONGRANGEMODE_ON ) != 0 )
+	if( ( SX1276Read( REG_OPMODE ) & RFLR_OPMODE_LONGRANGEMODE_ON ) != 0 )
     {
         SX1276.Settings.Modem = MODEM_LORA;
     }

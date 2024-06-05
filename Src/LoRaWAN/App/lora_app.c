@@ -226,22 +226,22 @@ void LoRaWAN_Init(void)
 //  LED_Init(LED_RED2);
 //
 //  /* Get LoRa APP version*/
-//  APP_LOG(TS_OFF, VLEVEL_M, "APP_VERSION:        V%X.%X.%X\r\n",
-//          (uint8_t)(__LORA_APP_VERSION >> __APP_VERSION_MAIN_SHIFT),
-//          (uint8_t)(__LORA_APP_VERSION >> __APP_VERSION_SUB1_SHIFT),
-//          (uint8_t)(__LORA_APP_VERSION >> __APP_VERSION_SUB2_SHIFT));
-//
-//  /* Get MW LoraWAN info */
-//  APP_LOG(TS_OFF, VLEVEL_M, "MW_LORAWAN_VERSION: V%X.%X.%X\r\n",
-//          (uint8_t)(__LORAWAN_VERSION >> __APP_VERSION_MAIN_SHIFT),
-//          (uint8_t)(__LORAWAN_VERSION >> __APP_VERSION_SUB1_SHIFT),
-//          (uint8_t)(__LORAWAN_VERSION >> __APP_VERSION_SUB2_SHIFT));
-//
-//  /* Get MW SubGhz_Phy info */
-//  APP_LOG(TS_OFF, VLEVEL_M, "MW_RADIO_VERSION:   V%X.%X.%X\r\n",
-//          (uint8_t)(__SUBGHZ_PHY_VERSION >> __APP_VERSION_MAIN_SHIFT),
-//          (uint8_t)(__SUBGHZ_PHY_VERSION >> __APP_VERSION_SUB1_SHIFT),
-//          (uint8_t)(__SUBGHZ_PHY_VERSION >> __APP_VERSION_SUB2_SHIFT));
+  APP_LOG(TS_OFF, VLEVEL_M, "APP_VERSION:        V%X.%X.%X\r\n",
+          (uint8_t)(__LORA_APP_VERSION >> __APP_VERSION_MAIN_SHIFT),
+          (uint8_t)(__LORA_APP_VERSION >> __APP_VERSION_SUB1_SHIFT),
+          (uint8_t)(__LORA_APP_VERSION >> __APP_VERSION_SUB2_SHIFT));
+
+  /* Get MW LoraWAN info */
+  APP_LOG(TS_OFF, VLEVEL_M, "MW_LORAWAN_VERSION: V%X.%X.%X\r\n",
+          (uint8_t)(__LORAWAN_VERSION >> __APP_VERSION_MAIN_SHIFT),
+          (uint8_t)(__LORAWAN_VERSION >> __APP_VERSION_SUB1_SHIFT),
+          (uint8_t)(__LORAWAN_VERSION >> __APP_VERSION_SUB2_SHIFT));
+
+  /* Get MW SubGhz_Phy info */
+  APP_LOG(TS_OFF, VLEVEL_M, "MW_RADIO_VERSION:   V%X.%X.%X\r\n",
+          (uint8_t)(__SUBGHZ_PHY_VERSION >> __APP_VERSION_MAIN_SHIFT),
+          (uint8_t)(__SUBGHZ_PHY_VERSION >> __APP_VERSION_SUB1_SHIFT),
+          (uint8_t)(__SUBGHZ_PHY_VERSION >> __APP_VERSION_SUB2_SHIFT));
 
 //  UTIL_TIMER_Create(&TxLedTimer, 0xFFFFFFFFU, UTIL_TIMER_ONESHOT, OnTxTimerLedEvent, NULL);
 //  UTIL_TIMER_Create(&RxLedTimer, 0xFFFFFFFFU, UTIL_TIMER_ONESHOT, OnRxTimerLedEvent, NULL);

@@ -117,11 +117,11 @@ int32_t EnvSensors_Read(sensor_t *sensor_data) {
 #error SENSOR_ENABLED not defined
 #endif  /* SENSOR_ENABLED */
 
-	HAL_UART_Receive(&huart2, rxBuffer, 4, HAL_MAX_DELAY);
+//	HAL_UART_Receive(&huart2, rxBuffer, 4, HAL_MAX_DELAY);
 	if (rxBuffer[1] == 0xff) {
 		distance = rxBuffer[2] * 256 + rxBuffer[3];
 		if (distance == 250) {
-			HAL_UART_Transmit(&huart2, (uint8_t*) ("Below The Lower Limit\n"),sizeof("Below The Lower Limit\n"), HAL_MAX_DELAY);
+//			HAL_UART_Transmit(&huart2, (uint8_t*) ("Below The Lower Limit\n"),sizeof("Below The Lower Limit\n"), HAL_MAX_DELAY);
 		} else {
 			sensor_data->distance = distance;
 //			sprintf(buffer, "Distance: %.1f\n", (float) distance / 10);

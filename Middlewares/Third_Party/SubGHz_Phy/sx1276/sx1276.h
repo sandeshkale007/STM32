@@ -53,6 +53,21 @@ extern "C"
 /*!
  * Radio wake-up time from sleep
  */
+#define Sx_Board_IoInit            SX1276MB1MAS_RADIO_IoInit
+#define Sx_Board_IoDeInit          SX1276MB1MAS_RADIO_IoDeInit
+#define Sx_Board_IoIrqInit         SX1276MB1MAS_RADIO_IoIrqInit
+#define Sx_Board_SendRecv          SX1276MB1MAS_RADIO_SendRecv
+#define Sx_Board_ChipSelect        SX1276MB1MAS_RADIO_ChipSelect
+#define Sx_Board_CheckRfFrequency  SX1276MB1MAS_RADIO_CheckRfFrequency
+#define Sx_Board_Reset             SX1276MB1MAS_RADIO_Reset
+#define Sx_Board_SetXO             SX1276MB1MAS_RADIO_SetXO
+#define Sx_Board_GetWakeUpTime     SX1276MB1MAS_RADIO_GetWakeUpTime
+#define Sx_Board_GetPaSelect       SX1276MB1MAS_RADIO_GetPaSelect
+#define Sx_Board_SetAntSw          SX1276MB1MAS_RADIO_SetAntSw
+#define Sx_Board_Bus_Init          SX1276MB1MAS_RADIO_Bus_Init
+#define Sx_Board_Bus_deInit        SX1276MB1MAS_RADIO_Bus_deInit
+#define Sx_Board_GetDio1PinState   SX1276MB1MAS_RADIO_GetDio1PinState
+
 #define RADIO_WAKEUP_TIME                           2 // [ms]
 
 #define RF_MID_BAND_THRESH                          525000000

@@ -112,7 +112,7 @@ void SystemApp_Init(void)
 
   /*Initialize the terminal */
   UTIL_ADV_TRACE_Init();
-  HAL_UART_Transmit(&huart2, (uint8_t *)("Started"), sizeof("Started"), HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart6, (uint8_t *)("Started"), sizeof("Started"), HAL_MAX_DELAY);
   UTIL_ADV_TRACE_RegisterTimeStampFunction(TimestampNow);
 
   /*Set verbose LEVEL*/
@@ -127,7 +127,7 @@ void SystemApp_Init(void)
   SX1276MB1MAS_RADIO_IoInit();
 
   /*Initialize the Sensors */
-  EnvSensors_Init();
+//  EnvSensors_Init();
 
   /*Init low power manager*/
   UTIL_LPM_Init();
