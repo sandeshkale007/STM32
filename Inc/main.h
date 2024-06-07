@@ -71,10 +71,10 @@ void Error_Handler(void);
 #define DMAMUX_CLK_ENABLE()              __HAL_RCC_DMAMUX1_CLK_ENABLE()
 
 /* Definition for USARTx's DMA */
-#define USARTx_TX_DMA_CHANNEL             DMA1_Channel7
+#define USARTx_TX_DMA_CHANNEL             DMA1_Stream6
 
 /* Definition for USARTx's NVIC */
-#define USARTx_DMA_TX_IRQn                DMA1_Channel7_IRQn
+#define USARTx_DMA_TX_IRQn                DMA1_Stream6_IRQn
 #define USARTx_DMA_TX_IRQHandler          DMA1_Channel7_IRQHandler
 
 /* Definition for USARTx's NVIC */

@@ -54,10 +54,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 void callback(void *data) {
 	for (;;) {
-//		HAL_UART_Transmit(&huart2, (uint8_t*) ("Hello\r\n"),
-//				sizeof("Hello\r\n"), HAL_MAX_DELAY);
-//		HAL_Delay(1000);
-		vTaskDelay(pdMS_TO_TICKS(1000));
+		HAL_UART_Transmit(&huart2, (uint8_t*) ("Hello\r\n"),
+				sizeof("Hello\r\n"), HAL_MAX_DELAY);
 		i++;
 	}
 }
@@ -181,17 +179,17 @@ void SystemClock_Config(void) {
  * @param  htim : TIM handle
  * @retval None
  */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	/* USER CODE BEGIN Callback 0 */
-
-	/* USER CODE END Callback 0 */
-	if (htim->Instance == TIM1) {
-		HAL_IncTick();
-	}
-	/* USER CODE BEGIN Callback 1 */
-
-	/* USER CODE END Callback 1 */
-}
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+//	/* USER CODE BEGIN Callback 0 */
+//
+//	/* USER CODE END Callback 0 */
+//	if (htim->Instance == TIM1) {
+//		HAL_IncTick();
+//	}
+//	/* USER CODE BEGIN Callback 1 */
+//
+//	/* USER CODE END Callback 1 */
+//}
 
 /**
  * @brief  This function is executed in case of error occurrence.

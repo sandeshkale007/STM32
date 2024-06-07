@@ -256,7 +256,9 @@ HAL_StatusTypeDef MX_SPI1_Init(SPI_HandleTypeDef *hspi)
   hspi->Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi->Init.NSS = SPI_NSS_SOFT;
   /* SPI1 is on APB2 for L0x3 -> HAL_RCC_GetPCLK2Freq */
-  hspi->Init.BaudRatePrescaler = SPI_GetPrescaler(HAL_RCC_GetPCLK2Freq(), RADIO_SPI_BAUDRATE);
+//  hspi->Init.BaudRatePrescaler = SPI_GetPrescaler(HAL_RCC_GetPCLK2Freq(), RADIO_SPI_BAUDRATE);
+  hspi->Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+
   hspi->Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi->Init.TIMode = SPI_TIMODE_DISABLE;
   hspi->Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
